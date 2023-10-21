@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Password Validator</string>
+    <string name="starting_indicator">Enter a Strong Password</string>
+    <string name="weak_indicator">Weak Password</string>
+    <string name="strong_indicator">Strong Password</string>
+    <string name="password_hint">Enter a Password</string>
 </resources>
