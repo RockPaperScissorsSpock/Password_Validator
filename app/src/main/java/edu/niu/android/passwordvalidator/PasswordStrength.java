@@ -9,11 +9,11 @@
  ******************************************************************************************/
 package edu.niu.android.passwordvalidator;
 
-public class PasswordStrength {
-
+public class PasswordStrength
+{
     // Determine whether or not the password is strong
-    public boolean weakPass(String password) {
+    public boolean weakPass(String password)
+    {
         return password.length() <= 8;
     }
-
 }

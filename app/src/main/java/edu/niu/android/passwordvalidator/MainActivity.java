@@ -25,13 +25,14 @@ import android.text.TextWatcher;
 import android.text.Editable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity
+{
     private PasswordStrength model;
     private UIView view;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setTitle(R.string.app_name);
 
@@ -40,16 +41,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(view);
 
         //Set up TextWatcher to change strengthIndicator TextView
-        view.setPasswordTextWatcher(new TextWatcher() {
+        view.setPasswordTextWatcher(new TextWatcher()
+        {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-            }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-            }
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
             @Override
-            public void afterTextChanged(Editable s) {
+            public void afterTextChanged(Editable s)
+            {
                 String password = view.getPasswordText();
                 boolean weakPass = model.weakPass(password);
                 view.strengthIndicatorUpdate(weakPass);

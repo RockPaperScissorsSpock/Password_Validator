@@ -17,10 +17,8 @@ import android.widget.EditText;
 import android.widget.GridLayout;
 import android.widget.TextView;
 
-
-
-public class UIView extends GridLayout{
-
+public class UIView extends GridLayout
+{
     private EditText passwordEntry;
     private TextView strengthIndicator;
 
@@ -42,9 +40,7 @@ public class UIView extends GridLayout{
         strengthIndicator.setTextSize(22);
         addView(strengthIndicator);
 
-
         // Set up the passwordEntry EditText
-
         passwordEntry = new EditText(context);
         GridLayout.LayoutParams passwordParams = new GridLayout.LayoutParams();
         passwordParams.width = LayoutParams.MATCH_PARENT;
@@ -56,16 +52,19 @@ public class UIView extends GridLayout{
     }
 
     // Set up the TextWatcher for the passwordEntry EditText
-    public void setPasswordTextWatcher(TextWatcher textWatcher) {
+    public void setPasswordTextWatcher(TextWatcher textWatcher)
+    {
         passwordEntry.addTextChangedListener(textWatcher);
     }
 
     // Returns the user's password entry
-    public String getPasswordText() {
+    public String getPasswordText()
+    {
         return passwordEntry.getText().toString();
     }
     // Change the color/text of the strengthIndicator based on the isWeak method from the model
-    public void strengthIndicatorUpdate(boolean isWeak) {
+    public void strengthIndicatorUpdate(boolean isWeak)
+    {
         if (isWeak) {
             strengthIndicator.setText(R.string.weak_indicator);
             strengthIndicator.setTextColor(getResources().getColor(R.color.red));
